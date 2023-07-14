@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Aldos pizza shop</title>
 </head>
+
 <body>
-  
+  <h1>Pizza Order</h1>
+  <form id="pizza-form">
+    <fieldset>
+      <legend>Toppings</legend>
+      <label>
+        <input type="checkbox" name="topping" value="cheese"> Cheese
+      </label>
+      <label>
+        <input type="checkbox" name="topping" value="pepperoni"> Pepperoni
+      </label>
+      <label>
+        <input type="checkbox" name="topping" value="artichoke"> Artichoke
+      </label>
+      <label>
+        <input type="checkbox" name="topping" value="anchovy"> Anchovy
+      </label>
+      <label>
+        <input type="checkbox" name="topping" value="pineapple"> Pineapple
+      </label>
+      <label>
+        <input type="checkbox" name="topping" value="bacon"> Bacon
+      </label>
+      <label>
+        <input type="checkbox" name="topping" value="greenpepper"> Green Pepper
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Size</legend>
+      <label>
+        <input type="radio" name="size" value="small" checked> Small
+      </label>
+      <label>
+        <input type="radio" name="size" value="medium"> Medium
+      </label>
+      <label>
+        <input type="radio" name="size" value="large"> Large
+      </label>
+    </fieldset>
+
+    <button type="submit">Place Order</button>
+  </form>
 </body>
+
 </html>
