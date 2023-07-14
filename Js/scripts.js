@@ -13,7 +13,6 @@ class Pizza {
     if (!["small", "medium", "large"].includes(size)) {
       throw new Error("Invalid input for size. Only 'small', 'medium', or 'large' are allowed.");
     }
-    this.name = "Pizza";
     this.toppings = toppings;
     this.size = size;
   };
