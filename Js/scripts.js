@@ -25,11 +25,13 @@ class Pizza {
       medium: 10,
       large: 15
     };
+    if (this.toppings.length === 0) {
+      throw new Error("No toppings selected. Please choose at least one topping.");
+    }
+
     let totalCost = basePrice + toppingPrice + sizePrice[this.size];
     return totalCost;
   };
-
-
 }
 
 
