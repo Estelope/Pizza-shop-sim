@@ -37,5 +37,10 @@ class Pizza {
 
 
 // ui logic
+window.addEventListener("load", function(){
+  document.querySelector("form#pizza-form")
+
+})
+
 //cost = pizza.calculateTotal();
 //console.log(('The total cost of your pizza is $' + cost));

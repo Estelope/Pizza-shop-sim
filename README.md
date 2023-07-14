@@ -88,3 +88,4 @@ Describe: CalculateTotal();
   Expected Output: "26"
 
 
+<!-- quick question: would I add a test to check for not selecting a toppings? or would that be considered ui logic since its only possible to input a "toppings" array of 0 by not selecting a checkbox (ui) --!>
