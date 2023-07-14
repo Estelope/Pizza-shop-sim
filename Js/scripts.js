@@ -10,6 +10,10 @@ class Pizza {
         throw new Error("Invalid input for toppings. Only letters are allowed.");
       }
     }
+     if (!["small", "medium", "large"].includes(size)) {
+      throw new Error("Invalid input for size. Only 'small', 'medium', or 'large' are allowed.");
+      
+    }
     this.name = "Pizza";
     this.toppings = toppings;
     this.size = size;
@@ -17,16 +21,15 @@ class Pizza {
 
   calculateTotal() {
     const basePrice = 12;
-    let topppingPrice = this.toppings.length * 2;
+    let toppingPrice = this.toppings.length * 2;
     let sizePrice = {
       small: 5,
       medium: 10,
       large: 15
     };
-    let totalCost = basePrice + topppingPrice + sizePrice[this.size];
-return totalCost;
-  }
-
+    let totalCost = basePrice + toppingPrice + sizePrice[this.size];
+    return totalCost;
+  };
 
 
 }

@@ -17,7 +17,7 @@ Describe: Pizza();
   Code: const myPizza = new Pizza("anchovies", "pineapple");
   Expected Output: Error ("Invalid input for toppings. An array is expected.");
 
-  Test:"When inputting a Pizza's toppings it should take words as the input, no numbers or special characters"
+  Test:"When inputting a Pizza's toppings it should take only words within the array, no numbers or special characters"
   Code: const myPizza = new Pizza(["anchovies", "pin5apple"]);
   Expected Output: Error ("Invalid input for toppings. Only letters are allowed.");
 
@@ -25,13 +25,16 @@ Describe: Pizza();
   Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
   Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" };
 
+  Test: "When inputting a Pizza's size selection, it should take only 'small', 'medium', or 'large' as the input.
+  Code: const myPizza = new Pizza(["anchovies", "pineapple"], "mediummm");
+  Expected Output: Error ("Invalid input for size. Only 'small', 'medium', or 'large' are allowed.");
 
 
 
 Describe: CalculateTotal();
-  Test:  It should return a Pizza object with a correct total cost dependent on size and toppings."
+  Test: "It should return a Pizza object with a correct total cost dependent on size and toppings."
   Code:const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
-      console.log(myPizza.CalculateTotal());
+      console.log(myPizza.calculateTotal());
   Expected Output: "26"
 
 
