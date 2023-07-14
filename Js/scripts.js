@@ -2,22 +2,24 @@
 
 class Pizza {
   constructor(toppings, size) {
-    characterList = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
-    if (toppings.includes(characterList)) {
-      
-      console.log("invalid input use letters only")
+    if (!Array.isArray(toppings)) {
+      throw new Error("Invalid input for toppings. An array is expected.");
+    }
+    for (const topping of toppings) {
+      if (!/^[A-Za-z]+$/.test(topping)) {
+        throw new Error("Invalid input for toppings. Only letters are allowed.")
+      }
     }
     this.name = "Pizza";
     this.toppings = toppings;
     this.size = size;
+
   };
-  
-    calculateTotal(){
+
+  calculateTotal() {
     const basePrice = 12;
-    }
+  }
 
-  
-  
+
+
 }
-
-
