@@ -37,10 +37,27 @@ class Pizza {
 
 
 // ui logic
-window.addEventListener("load", function(){
-  document.querySelector("form#pizza-form")
+function handleSubmission(event) {
+  event.preventDefault();
 
-})
+  const selectedToppings = Array.from(document.querySelectorAll('input[name="topping"]:checked'))
+    .map(function (checkbox) {
+      return checkbox.value;
+    });
 
-//cost = pizza.calculateTotal();
-//console.log(('The total cost of your pizza is $' + cost));
+  const selectedSize = document.querySelector('input[name="size"]:checked').value;
+
+  try {
+    const pizza = new Pizza(selectedToppings, selectedSize);
+    const cost = pizza.calculateTotal();
+    alert('The total cost of your pizza is $' + cost);
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+window.addEventListener("load", function () {
+  const pizzaForm = document.querySelector("form#pizza-form");
+  pizzaForm.addEventListener("submit", handleSubmission);
+  pizzaForm.addEventListener("reset", handleSubmission);
+});
