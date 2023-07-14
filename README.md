@@ -21,7 +21,7 @@ Describe: Pizza();
   Code: const myPizza = new Pizza(["anchovies", "pin5apple"]);
   Expected Output: Error ("Invalid input for toppings. Only letters are allowed.");
 
-  Test: "It should return a Pizza object with correct size selection"
+  Test: "It should return a Pizza object with the correct size selection"
   Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
   Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" };
 
@@ -30,7 +30,8 @@ Describe: Pizza();
 
 Describe: CalculateTotal();
   Test:  It should return a Pizza object with a correct total cost dependent on size and toppings."
-  Code:
-  Expected Output: 
+  Code:const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
+      console.log(myPizza.CalculateTotal());
+  Expected Output: "26"
 
 
