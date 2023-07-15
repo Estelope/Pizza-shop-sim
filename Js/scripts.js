@@ -59,6 +59,7 @@ function handleSubmission(event) {
   document.getElementById("fieldTwo").setAttribute("class", "hidden");
   document.body.appendChild(resultDiv);
   document.getElementById("reset").removeAttribute("class", "hidden")
+  document.getElementById("submit").setAttribute("class", "hidden");
 }
 
 function handleReset(event) {
@@ -68,6 +69,7 @@ function handleReset(event) {
   document.getElementById("fieldTwo").classList.remove("hidden");
   document.getElementById("reset").classList.add("hidden");
   document.querySelector("div").remove();
+  document.getElementById("submit").classList.remove("hidden");
 }
 
 window.addEventListener("load", function () {
