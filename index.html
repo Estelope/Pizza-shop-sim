@@ -12,7 +12,7 @@
 <body class="center">
   <h1>Pizza Order</h1>
   <form id="pizza-form" class="form">
-    <fieldset>
+    <fieldset id ="fieldTwo">
       <legend>Toppings</legend>
       <label>
         <input type="checkbox" name="topping" value="cheese"> Cheese
@@ -38,7 +38,7 @@
       </label>
     </fieldset>
 
-    <fieldset>
+    <fieldset id="fieldOne">
       <legend>Size</legend>
       <label>
         <input type="radio" name="size" value="small" checked> Small
@@ -52,7 +52,7 @@
     </fieldset>
 
     <button type="submit" class="submitButton">Place Order</button>
-    <button type="reset-button" class="hidden">GET MORE ZA!</button>
+    <button type="reset" id ="reset" class="hidden">GET MORE ZA!</button>
   </form>
 </body>
 

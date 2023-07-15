@@ -47,23 +47,33 @@ function handleSubmission(event) {
 
   const selectedSize = document.querySelector('input[name="size"]:checked').value;
 
-  let usersPizza= new Pizza(selectedToppings, selectedSize)
-  let cost =usersPizza.calculateTotal();
+  let usersPizza = new Pizza(selectedToppings, selectedSize)
+  let cost = usersPizza.calculateTotal();
 
   let resultDiv = document.createElement("div");
   let p = document.createElement("p");
   resultDiv.appendChild(p);
   p.innerText = "Your total cost:$" + cost;
 
-  document.getElementById("pizza-form").setAttribute("class", "hidden");
+  document.getElementById("fieldOne").setAttribute("class", "hidden");
+  document.getElementById("fieldTwo").setAttribute("class", "hidden");
   document.body.appendChild(resultDiv);
+  document.getElementById("reset").removeAttribute("class", "hidden")
+}
 
+function handleReset(event) {
+  event.preventDefault();
+
+  document.getElementById("fieldOne").classList.remove("hidden");
+  document.getElementById("fieldTwo").classList.remove("hidden");
+  document.getElementById("reset").classList.add("hidden");
+  document.querySelector("div").remove();
 }
 
 window.addEventListener("load", function () {
   const pizzaForm = document.querySelector("form#pizza-form");
   pizzaForm.addEventListener("submit", handleSubmission);
-  pizzaForm.addEventListener("reset", handleSubmission);
+  pizzaForm.addEventListener("reset", handleReset);
 });
 
 
