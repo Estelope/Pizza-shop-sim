@@ -1,5 +1,4 @@
 //bussiness logic 
-
 class Pizza {
   constructor(toppings, size) {
     if (!Array.isArray(toppings)) {
@@ -33,9 +32,6 @@ class Pizza {
     return totalCost;
   };
 }
-
-
-
 // ui logic
 function handleSubmission(event) {
   event.preventDefault();
@@ -78,5 +74,3 @@ window.addEventListener("load", function () {
   pizzaForm.addEventListener("reset", handleReset);
 });
 
-
-//add functionality for buttons to appear and dissappear on submit and display total in <p>
