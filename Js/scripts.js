@@ -47,16 +47,18 @@ function handleSubmission(event) {
 
   const selectedSize = document.querySelector('input[name="size"]:checked').value;
 
-  
+  let usersPizza= new Pizza(selectedToppings, selectedSize)
+  let cost =usersPizza.calculateTotal();
 
-  // try {
-  //   const pizza = new Pizza(selectedToppings, selectedSize);
-  //   const cost = pizza.calculateTotal();
-  //   alert('The total cost of your pizza is $' + cost);
-  // } catch (error) {
-  //   alert(error.message);
-  // }
-  }
+  let resultDiv = document.createElement("div");
+  let p = document.createElement("p");
+  resultDiv.appendChild(p);
+  p.innerText = "Your total cost:$" + cost;
+
+  document.getElementById("pizza-form").setAttribute("class", "hidden");
+  document.body.appendChild(resultDiv);
+
+}
 
 window.addEventListener("load", function () {
   const pizzaForm = document.querySelector("form#pizza-form");
