@@ -47,17 +47,22 @@ function handleSubmission(event) {
 
   const selectedSize = document.querySelector('input[name="size"]:checked').value;
 
-  try {
-    const pizza = new Pizza(selectedToppings, selectedSize);
-    const cost = pizza.calculateTotal();
-    alert('The total cost of your pizza is $' + cost);
-  } catch (error) {
-    alert(error.message);
+  
+
+  // try {
+  //   const pizza = new Pizza(selectedToppings, selectedSize);
+  //   const cost = pizza.calculateTotal();
+  //   alert('The total cost of your pizza is $' + cost);
+  // } catch (error) {
+  //   alert(error.message);
+  // }
   }
-}
 
 window.addEventListener("load", function () {
   const pizzaForm = document.querySelector("form#pizza-form");
   pizzaForm.addEventListener("submit", handleSubmission);
   pizzaForm.addEventListener("reset", handleSubmission);
 });
+
+
+//add functionality for buttons to appear and dissappear on submit and display total in <p>
