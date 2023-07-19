@@ -58,8 +58,7 @@ function handleSubmission(event) {
   document.getElementById("submit").setAttribute("class", "hidden");
 }
 
-function handleReset(event) {
-  event.preventDefault();
+function handleReset() {
 
   document.getElementById("fieldOne").classList.remove("hidden");
   document.getElementById("fieldTwo").classList.remove("hidden");
@@ -73,4 +72,5 @@ window.addEventListener("load", function () {
   pizzaForm.addEventListener("submit", handleSubmission);
   pizzaForm.addEventListener("reset", handleReset);
 });
+
 
